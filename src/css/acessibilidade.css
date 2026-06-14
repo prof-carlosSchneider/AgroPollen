@@ -1,0 +1,55 @@
+/* ==========================================================================
+   ARQUIVO: acessibilidade.css
+   DESCRIÇÃO: Estilos da barra de acessibilidade (ajuste de zoom e contraste).
+   ========================================================================== */
+
+/* Barra de acessibilidade fixa no topo */
+.barra-acessibilidade {
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+  padding: 6px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap; /* Permite quebra de linha em telas pequenas */
+  z-index: 110; /* Mantém a barra sobreposta aos demais elementos */
+  position: relative;
+}
+
+/* Agrupamento dos botões e indicadores */
+.grupo-acessibilidade {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+/* Botões de controle de contraste e tamanho da fonte */
+.botao-acessibilidade {
+  background-color: var(--bg-app);
+  border: 1px solid var(--border-color);
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--text-main);
+  font-weight: 700;
+  font-size: 0.76rem;
+}
+
+.botao-acessibilidade:hover {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary);
+}
+
+/* Indicador de escala do tamanho da fonte */
+#indicador-escala-fonte {
+  font-family: monospace;
+  background-color: var(--bg-app);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}

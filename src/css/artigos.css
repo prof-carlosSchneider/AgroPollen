@@ -1,0 +1,253 @@
+/* ==========================================================================
+   ARQUIVO: artigos.css
+   DESCRIÇÃO: Formatação dos cards de artigos na home e layout da biblioteca.
+   ========================================================================== */
+
+/* --- ARTIGO-CARDS DA HOME PAGE --- */
+.titulo-secao-embrulho {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.titulo-secao-embrulho h2 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--color-primary);
+  margin-bottom: 4px;
+}
+
+.titulo-secao-embrulho p {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.grade-artigos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.card-artigo {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.card-artigo:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.imagem-card {
+  width: 100%;
+  height: 145px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.corpo-card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.corpo-card h3 {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  line-height: 1.35;
+  margin-bottom: 8px;
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.corpo-card p {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.botao-leitura {
+  align-self: center;
+  width: auto;
+  min-width: 180px;
+  text-align: center;
+}
+
+/* --- CABEÇALHO DA BIBLIOTECA EDITORIAL --- */
+.cabecalho-site {
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+  padding: 32px 0;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 40px;
+}
+
+.cabecalho-site .container-cabecalho {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.cabecalho-site h1 {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+}
+
+.cabecalho-site .slogan {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.corpo-pagina-artigo {
+  background-color: var(--bg-app);
+}
+
+/* --- DESIGN EDITORIAL DO ARTIGO INTEGRO --- */
+.secao-introducao {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-top: 6px solid var(--color-primary);
+  border-radius: 20px;
+  padding: 56px;
+  box-shadow: var(--shadow-md);
+  text-align: left;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.secao-introducao:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(21, 62, 25, 0.08);
+}
+
+.secao-introducao h2 {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  line-height: 1.3;
+  color: var(--text-main);
+  margin-top: 12px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.secao-introducao .etiqueta {
+  font-size: 0.85rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 6px 14px;
+  background-color: var(--color-accent-light);
+  color: var(--color-accent);
+  border: 1px solid rgba(217, 119, 6, 0.15);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.secao-introducao img {
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 32px;
+  transition: transform 0.3s ease;
+}
+
+.secao-introducao img:hover {
+  transform: scale(1.01);
+}
+
+.corpo-artigo {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.corpo-artigo p {
+  color: var(--text-main);
+  margin-bottom: 0;
+  text-align: justify;
+}
+
+/* Letra capitular no primeiro parágrafo do artigo */
+.corpo-artigo p:first-of-type::first-letter {
+  font-family: var(--font-display);
+  font-size: 3.8rem;
+  float: left;
+  line-height: 1;
+  margin-right: 12px;
+  margin-top: 4px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.rodape-artigo {
+  margin-top: 32px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 24px;
+  text-align: center;
+}
+
+.secao-introducao .botao-primario {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--color-primary) !important;
+  color: #ffffff !important;
+  padding: 14px 28px !important;
+  border-radius: 12px !important;
+  font-weight: 600 !important;
+  border: none !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: all 0.2s ease !important;
+}
+
+.secao-introducao .botao-primario:hover {
+  background-color: var(--color-primary-hover) !important;
+  transform: translateX(-4px);
+  box-shadow: var(--shadow-md) !important;
+}
+
+@media (max-width: 768px) {
+  .secao-introducao {
+    padding: 36px 24px !important;
+    margin: 20px auto !important;
+  }
+  
+  .secao-introducao h2 {
+    font-size: 1.9rem !important;
+  }
+  
+  .secao-introducao > div p {
+    text-align: left;
+  }
+}

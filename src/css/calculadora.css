@@ -1,0 +1,302 @@
+/* ==========================================================================
+   ARQUIVO: calculadora.css
+   DESCRIÇÃO: Estilos da calculadora de impacto ecológico da meliponicultura.
+   ========================================================================== */
+
+.secao-calculadora {
+  max-width: 900px !important;
+  margin: 40px auto !important;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.grade-calculadora {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+@media (min-width: 768px) {
+  .grade-calculadora {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
+
+/* --- FORMULÁRIO DE ENTRADAS --- */
+.card-formulario-calculadora {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-top: 6px solid var(--color-primary);
+  border-radius: 20px;
+  padding: 36px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.titulo-formulario-calculadora {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.texto-formulario-calculadora {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.formulario-calculadora {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.grupo-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.ultimo-grupo-formulario {
+  margin-bottom: 24px;
+}
+
+.rotulo-formulario {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.entrada-formulario {
+  font-family: var(--font-body);
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  border: 1.5px solid var(--border-color);
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.entrada-formulario:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(21, 62, 25, 0.1);
+}
+
+.botao-calculadora {
+  width: 100%;
+  padding: 14px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 12px;
+  border: none;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
+}
+
+.botao-calculadora:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* --- CARD DE RESULTADOS --- */
+.card-resultados-calculadora {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-top: 6px solid var(--color-accent);
+  border-radius: 20px;
+  padding: 36px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+/* Marca d'água no fundo do card de resultados */
+.card-resultados-calculadora::before {
+  content: "🐝";
+  position: absolute;
+  bottom: -40px;
+  right: -20px;
+  font-size: 10rem;
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+/* Estado aguardando dados */
+.resultados-aguardando {
+  text-align: center;
+  margin: auto 0;
+  padding: 30px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.resultados-aguardando h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.logo-aguardando {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 2px solid var(--color-primary);
+  object-fit: cover;
+  animation: floatBee 3s ease-in-out infinite;
+}
+
+@keyframes floatBee {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(5deg);
+  }
+}
+
+.texto-aguardando {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Estado com dados exibidos */
+.resultados-ativos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeInResults 0.4s ease-out;
+}
+
+@keyframes fadeInResults {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.banner-boas-vindas {
+  background-color: var(--color-accent-light);
+  border-left: 4px solid var(--color-accent);
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.4;
+}
+
+.item-estatistica {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--bg-app);
+  border: 1px solid var(--border-color);
+  padding: 16px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.item-estatistica:hover {
+  transform: scale(1.02);
+  border-color: var(--color-accent);
+}
+
+.icone-estatistica {
+  font-size: 1.8rem;
+  background-color: var(--bg-card);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+.conteudo-estatistica {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.valor-estatistica {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1.1;
+}
+
+.rotulo-estatistica {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* Painel de sugestões personalizadas */
+.container-dica {
+  border-top: 1px dashed var(--border-color);
+  padding-top: 18px;
+  margin-top: 8px;
+}
+
+.caixa-dica {
+  background-color: rgba(217, 119, 6, 0.05);
+  border: 1px solid var(--border-color);
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.titulo-dica {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.descricao-dica {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.rodape-calculadora {
+  text-align: center;
+  margin-top: 10px;
+}

@@ -1,0 +1,17 @@
+# Arquivos de sistema do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Logs de depuração
+*.log
+
+# Pastas de configuração de IDEs e editores
+.vscode/
+.idea/
+.project
+.settings/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp

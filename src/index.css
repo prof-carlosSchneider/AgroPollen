@@ -1,0 +1,45 @@
+/* ==========================================================================
+   PORTAL AGROPÓLLEN - COLÉGIO CÍVICO-MILITAR MOYSÉS LUPION
+   Antonina/PR - Concurso Agrinho 2026 (Agroecologia e Abelhas Nativas)
+   
+   ARQUIVO MASTER: index.css
+   
+   COMENTÁRIO DOS ALUNOS:
+   "Oi, professor! A gente andava achando que misturar toda a folha de estilo
+   num arquivo gigante de quase 1000 linhas deixava tudo muito confuso para
+   depurar. Por isso, decidimos dividir o CSS em 'gavetas' (arquivos separados)
+   pela utilidade de cada tela.
+   
+   Agora o navegador importa tudo bem organizado através do @import nativo.
+   Fica mais leve para ler e muito mais elegante! Aqui embaixo tá o nosso mapa:"
+   ========================================================================== */
+
+/* 1. Cores, fontes, transições e variáveis de contraste (Claro e Escuro) */
+@import "./css/variaveis.css";
+
+/* 2. Barra slim de acessibilidade do topo (Zoom e contraste) */
+@import "./css/acessibilidade.css";
+
+/* 3. Navegação principal travada no topo (Navbar) e rodapé do colégio */
+@import "./css/navegacao.css";
+
+/* 4. Banner principal (Hero) com a foto da mata atlântica de Antonina */
+@import "./css/hero.css";
+
+/* 5. Grades gerais, section-cards unificados e nossos botões padrão */
+@import "./css/layout.css";
+
+/* 6. Explicação técnica sobre abelhas e Reserva Legal nas roças */
+@import "./css/reserva.css";
+
+/* 7. Nosso widget recomendador inteligente por cidades vizinhas */
+@import "./css/recomendador.css";
+
+/* 8. Artigo-cards e sistema de leitura editorial (Drop Cap clássico) */
+@import "./css/artigos.css";
+
+/* 9. Créditos da nossa equipe, professores e ficha técnica sobre a escola */
+@import "./css/sobre.css";
+
+/* 10. Calculadora escolar interativa de impactos de polinização */
+@import "./css/calculadora.css";

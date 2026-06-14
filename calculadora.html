@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Impacto Ecológico das Abelhas - AgroPóllen</title>
+
+  <!-- Sincronização de tema para evitar flashes de cor na renderização -->
+  <!-- Scripts de lógica e banco de dados local -->
+  <script src="src/theme-sync.js"></script>
+
+  <!-- Folha de estilos unificada do projeto -->
+  <link rel="stylesheet" href="src/index.css" />
+</head>
+
+<body class="corpo-pagina-artigo">
+
+  <!-- Barra utilitária para controle de acessibilidade ( zoom e contraste) -->
+  <div class="barra-acessibilidade" role="toolbar" aria-label="Ferramentas de acessibilidade">
+    <div class="grupo-acessibilidade">
+      <span>Contraste:</span>
+      <button id="botao-alternar-tema" class="botao-acessibilidade">
+        <span class="texto-botao-tema">Tema Escuro</span>
+      </button>
+    </div>
+
+    <div class="grupo-acessibilidade">
+      <span>Acessibilidade:</span>
+      <button id="botao-diminuir-fonte" class="botao-acessibilidade" title="Diminuir texto">A-</button>
+      <span id="indicador-escala-fonte">100%</span>
+      <button id="botao-aumentar-fonte" class="botao-acessibilidade" title="Aumentar texto">A+</button>
+    </div>
+  </div>
+
+  <!-- Barra de navegação principal (Menu Superior) -->
+  <nav class="barra-navegacao">
+    <div class="container-navegacao">
+      <a href="index.html" class="marca-navegacao">
+        <img class="logo-navegacao" src="src/assets/images/logo_1781388657183.jpg" alt="Logo AgroPóllen" />
+        <div class="texto-marca">
+          <span class="nome-marca">AgroPóllen</span>
+          <span class="subtitulo-marca">CCM Moysés Lupion</span>
+        </div>
+      </a>
+
+      <ul class="menu-navegacao">
+        <li><a href="index.html#reserva-legal-intro" class="link-navegacao">Reserva Legal</a></li>
+        <li><a href="index.html#recomendador" class="link-navegacao">Recomendador</a></li>
+        <li><a href="index.html#artigos" class="link-navegacao">Manuais Didáticos</a></li>
+        <li><a href="#" class="link-navegacao ativo link-destaque">Calculadora</a></li>
+        <li><a href="index.html#sobre" class="link-navegacao">Nossa Equipe</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Cabeçalho Simplificado -->
+  <header class="cabecalho-site">
+    <div class="container-cabecalho">
+      <h1>Calculadora de Potência Ecológica</h1>
+      <p class="slogan">Projeto Estudantil • Sinergia Meliponicultura e Florestal</p>
+    </div>
+  </header>
+
+  <!-- Área de conteúdo principal da página -->
+  <main class="conteudo-principal">
+
+    <div class="secao-calculadora">
+
+      <div class="grade-calculadora">
+
+        <!-- LADO ESQUERDO: Form de Entradas -->
+        <section class="card-formulario-calculadora">
+          <div>
+            <h2 class="titulo-formulario-calculadora">Insira Seus Dados</h2>
+            <p class="texto-formulario-calculadora">
+              Descubra em segundos qual é a força polinizadora e regenerativa das abelhas sem ferrão na costa litorânea
+              paranaense. Nosso algoritmo foi calibrado com base em dados técnicos de manejo regional florestal.
+            </p>
+          </div>
+
+          <form id="formulario-impacto" class="formulario-calculadora">
+            <div class="grupo-formulario">
+              <label for="calc-nome-usuario" class="rotulo-formulario">Seu Nome</label>
+              <input type="text" id="calc-nome-usuario" class="entrada-formulario" placeholder="Ex: Roger..." required />
+            </div>
+
+            <div class="grupo-formulario">
+              <label for="calc-caixas" class="rotulo-formulario">Quantidade de Caixas (Ninhos)</label>
+              <input type="number" id="calc-caixas" class="entrada-formulario" min="1" max="500" value="5" required />
+            </div>
+
+            <div class="grupo-formulario ultimo-grupo-formulario">
+              <label for="calc-especie" class="rotulo-formulario">Espécie de Abelha</label>
+              <select id="calc-especie" class="entrada-formulario">
+                <option value="jatai">Abelha Jataí (Tetragonisca angustula)</option>
+                <option value="mandacaia">Abelha Mandaçaia (Melipona mandacaia)</option>
+                <option value="guaraipo">Abelha Guaraipo (Melipona blackburni)</option>
+                <option value="iraie">Abelha Iraí (Nannotrigona testaceicornis)</option>
+                <option value="tiuba">Uruçu-Cinzenta / Tiúba (Melipona fasciculata)</option>
+                <option value="tubuna">Abelha Tubuna (Scaptotrigona bipunctata)</option>
+                <option value="mirim_quacu">Abelha Mirim-Quaçú (Plebeia remota)</option>
+                <option value="manduri">Abelha Manduri (Melipona marginata)</option>
+                <option value="urucu_amarela">Uruçu-Amarela (Melipona rufiventris)</option>
+                <option value="bora">Abelha Borá (Tetragona clavipes)</option>
+                <option value="mirim_preguica">Mirim-Preguiça (Frieseomelitta varia)</option>
+                <option value="mirim_droriana">Mirim-Droriana (Plebeia droriana)</option>
+              </select>
+            </div>
+
+            <button type="submit" class="botao-calculadora">Calcular Força Ecológica ⚡</button>
+          </form>
+        </section>
+
+        <!-- LADO DIREITO: Painel de Resultados -->
+        <section class="card-resultados-calculadora">
+
+          <!-- Estado Inicial: Vazio/Placeholder -->
+          <div id="resultados-aguardando" class="resultados-aguardando">
+            <img class="logo-aguardando" src="src/assets/images/logo_1781388657183.jpg" alt="Logo AgroPóllen" />
+            <h3>Aguardando Seus Dados</h3>
+            <p class="texto-aguardando">
+              Digite seu nome e a quantidade de ninhos desejada no painel esquerdo e clique em <strong>"Calcular Força
+                Ecológica"</strong> para ver a mágica da polinização assistida acontecer!
+            </p>
+          </div>
+
+          <!-- Estado Ativo: Resultados Computados -->
+          <div id="resultados-ativos" class="resultados-ativos oculto">
+
+            <!-- Cartão de Boas-Vindas -->
+            <div id="resultados-boas-vindas" class="banner-boas-vindas">
+              <!-- Preenchido via calculadora.js -->
+            </div>
+
+            <!-- Blocos de Estatísticas -->
+            <div class="item-estatistica">
+              <div class="icone-estatistica">🌳</div>
+              <div class="conteudo-estatistica">
+                <span id="valor-estat-arvores" class="valor-estatistica">0 árvores</span>
+                <span class="rotulo-estatistica">Árvores Nativas Beneficiadas</span>
+              </div>
+            </div>
+
+            <div class="item-estatistica">
+              <div class="icone-estatistica">🗺️</div>
+              <div class="conteudo-estatistica">
+                <span id="valor-estat-area" class="valor-estatistica">0 ha (0 m²)</span>
+                <span class="rotulo-estatistica">Área Ativa de Polinização Protegida</span>
+              </div>
+            </div>
+
+            <div class="item-estatistica">
+              <div class="icone-estatistica">✨</div>
+              <div class="conteudo-estatistica">
+                <span id="valor-estat-flores" class="valor-estatistica">0 por dia</span>
+                <span class="rotulo-estatistica">Flores Polinizadas Diariamente</span>
+              </div>
+            </div>
+
+            <!-- Dica de Manejo Customizada de Acordo com o Volume -->
+            <div class="container-dica">
+              <div class="caixa-dica">
+                <h4 id="valor-titulo-dica" class="titulo-dica">DICA ESCOLAR:</h4>
+                <p id="valor-desc-dica" class="descricao-dica">
+                  Mantenha suas caixas de abelha próximas à floresta e protegidas do vento sul para assegurar longas
+                  jornadas de polinização!
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </section>
+
+      </div>
+
+      <div class="rodape-calculadora">
+        <a href="index.html" class="botao botao-contorno">&larr; Voltar para a Página Principal</a>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Rodapé Padrão do Colégio -->
+  
+  <!-- Rodapé institucional da página -->
+  <footer class="rodape-site">
+    <p>&copy; 2026 AgroPóllen • Colégio Cívico-Militar Moysés Lupion</p>
+    <p class="sub-rodape">Antonina - Paraná • Concurso Agrinho PR 2026</p>
+  </footer>
+
+  <!-- Scripts compartilhados (Acessibilidade) e específicos de cálculo -->
+  <script src="src/dados-cidades.js" defer></script>
+  <script src="src/main.js" defer></script>
+  <script src="src/calculadora.js" defer></script>
+</body>
+
+</html>

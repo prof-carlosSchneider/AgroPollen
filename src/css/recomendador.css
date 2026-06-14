@@ -1,0 +1,206 @@
+/* ==========================================================================
+   ARQUIVO: recomendador.css
+   DESCRIÇÃO: Estilos do recomendador interativo de espécies por cidade.
+   ========================================================================== */
+
+.secao-recomendador h2 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.texto-ajuda {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+/* Container de abas para seleção de cidades */
+.botoes-cidades {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  border-bottom: 1px dashed var(--border-color);
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+}
+
+.botao-cidade {
+  font-family: var(--font-body);
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.botao-cidade:hover {
+  background-color: var(--bg-card);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.botao-cidade.ativo {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #ffffff;
+  box-shadow: 0 3px 8px rgba(217, 119, 6, 0.15);
+}
+
+.botao-cidade.ativo:hover {
+  color: #ffffff;
+}
+
+/* Grid de exibição das listas de espécies */
+.grade-resultados {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+@media (min-width: 600px) {
+  .grade-resultados {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.coluna-resultados {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.coluna-resultados h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--color-primary);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+}
+
+.lista-especies {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Itens individuais de espécie clicáveis */
+.item-recomendacao {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: var(--bg-app);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  position: relative;
+}
+
+.item-recomendacao:hover {
+  border-color: var(--color-primary);
+  transform: translateX(4px);
+  background-color: var(--bg-card);
+  box-shadow: var(--shadow-sm);
+}
+
+.item-recomendacao.ativo {
+  border-color: var(--color-accent);
+  background-color: var(--color-accent-light);
+  box-shadow: 0 4px 10px rgba(217, 119, 6, 0.06);
+}
+
+.item-recomendacao.ativo:hover {
+  border-color: var(--color-accent);
+  background-color: var(--color-accent-light);
+}
+
+.icone-especie {
+  font-size: 1.4rem;
+  background-color: var(--bg-card);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+.detalhes-especie {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.nome-especie {
+  font-family: var(--font-display);
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.nome-cientifico-especie {
+  font-size: 0.72rem;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.resumo-especie {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.clique-detalhes {
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-top: 6px;
+  text-decoration: underline;
+}
+
+/* Painel inferior de informações detalhadas */
+.caixa-informacao {
+  border-left: 5px solid var(--color-accent);
+  background-color: var(--bg-app);
+  padding: 18px 24px;
+  border-radius: 12px;
+  border-top: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.caixa-informacao h4 {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--color-accent);
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.caixa-informacao p {
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}

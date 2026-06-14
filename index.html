@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgroPóllen - Educação Ambiental e Agroecologia (Litoral do Paraná)</title>
+
+  <!-- Sincronização de tema para evitar flashes de cor na renderização -->
+  <!-- Scripts de lógica e banco de dados local -->
+  <script src="src/theme-sync.js"></script>
+
+  <!-- Folha de estilos unificada do projeto -->
+  <link rel="stylesheet" href="src/index.css" />
+</head>
+
+<body>
+
+  <!-- Barra utilitária para controle de acessibilidade ( zoom e contraste) -->
+  <div class="barra-acessibilidade" role="toolbar" aria-label="Ferramentas de acessibilidade">
+    <div class="grupo-acessibilidade">
+      <span>Contraste:</span>
+      <button id="botao-alternar-tema" class="botao-acessibilidade">
+        <span class="texto-botao-tema">Tema Escuro</span>
+      </button>
+    </div>
+
+    <div class="grupo-acessibilidade">
+      <span>Acessibilidade:</span>
+      <button id="botao-diminuir-fonte" class="botao-acessibilidade" title="Diminuir texto">A-</button>
+      <span id="indicador-escala-fonte">100%</span>
+      <button id="botao-aumentar-fonte" class="botao-acessibilidade" title="Aumentar texto">A+</button>
+    </div>
+  </div>
+
+  <!-- Barra de navegação principal (Menu Superior) -->
+  <nav class="barra-navegacao">
+    <div class="container-navegacao">
+      <a href="#" class="marca-navegacao">
+        <img class="logo-navegacao" src="src/assets/images/logo_1781388657183.jpg" alt="Logo AgroPóllen" />
+        <div class="texto-marca">
+          <span class="nome-marca">AgroPóllen</span>
+          <span class="subtitulo-marca">CCM Moysés Lupion</span>
+        </div>
+      </a>
+
+      <ul class="menu-navegacao">
+        <li><a href="#reserva-legal-intro" class="link-navegacao">Reserva Legal</a></li>
+        <li><a href="#recomendador" class="link-navegacao">Recomendador por Cidades</a></li>
+        <li><a href="#artigos" class="link-navegacao">Manuais Didáticos</a></li>
+        <li><a href="calculadora.html" class="link-navegacao link-destaque">Calculadora de Impacto</a></li>
+        <li><a href="#sobre" class="link-navegacao">Nossa Equipe</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="secao-apresentacao">
+    <div class="sobreposicao-apresentacao"></div>
+    <div class="embrulho-apresentacao">
+      <div class="conteudo-apresentacao">
+        <h1 class="titulo-apresentacao">Preservando abelhas nativas e criando florestas produtivas</h1>
+        <p class="subtitulo-apresentacao">
+          Como a harmonia entre Sistemas Agroflorestais (SAFs) e a criação de abelhas sem ferrão (Meliponicultura)
+          impulsiona a restauração florestal sustentável e gera renda no litoral paranaense.
+        </p>
+        <div class="acoes-apresentacao">
+          <a href="#recomendador" class="botao botao-primario">Interagir com o Recomendador</a>
+          <a href="calculadora.html" class="botao botao-primario botao-destaque">Calcular Impacto 🐝</a>
+          <a href="#reserva-legal-intro" class="botao botao-contorno-apresentacao">Saber mais sobre Reserva Legal</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Área de conteúdo principal da página -->
+  <main class="conteudo-principal">
+
+    <section id="reserva-legal-intro" class="secao-reserva">
+      <div class="card-secao sombra-suave">
+        <h2 class="titulo-reserva">O Uso Inteligente da Reserva Legal (Mata Atlântica)</h2>
+        <p class="texto-reserva-principal">
+          De acordo com o Código Florestal Brasileiro (Lei nº 12.651/2012), a <strong>Reserva Legal (RL)</strong>
+          protege os ecossistemas nativos, mas regulamenta o manejo florestal sustentável. No modelo
+          <strong>AgroPóllen</strong>, essa área deixa de ser um pedaço intocado e passa a ser o motor de
+          sustentabilidade da propriedade rural por meio da simbiose perfeita entre abelhas e SAF!
+        </p>
+
+        <div class="grade-reserva">
+          <!-- Ponto 1: Meliponicultura -->
+          <div class="card-coluna-reserva">
+            <div class="icone-reserva">🐝</div>
+            <h3>Melicultura na Floresta Nativa</h3>
+            <p>
+              A floresta nativa preservada oferece abrigo seguro, ocos de árvores maduras e temperaturas reguladas.
+              Instalar caixas de abelhas nativas sem ferrão (como Guaraipo, Manduri e Mandaçaia) no interior da Reserva
+              Legal garante a polinização cruzada de espécies raras e ajuda na dispersão de sementes nativas locais.
+            </p>
+          </div>
+
+          <!-- Ponto 2: SAF como amortecimento -->
+          <div class="card-coluna-reserva">
+            <div class="icone-reserva">🌱</div>
+            <h3>Sistemas Agroflorestais em Zonas de Borda</h3>
+            <p>
+              Florestas alimentícias e SAFs cultivados nos limites da Reserva Legal atuam como zonas de amortecimento
+              contra ventos salinos e barreiras protetoras. Criam corredores ecológicos que expandem a biodiversidade
+              selvagem e fornecem oferta contínua de pólen de flores domésticas na entressafra florestal.
+            </p>
+          </div>
+
+          <!-- Ponto 3: Renda Ecológica -->
+          <div class="card-coluna-reserva">
+            <div class="icone-reserva">🍯</div>
+            <h3>Atividade de Baixo Impacto e Alta Renda</h3>
+            <p>
+              A meliponicultura e o manejo cooperativo de espécies como palmito juçara e cacau silvestre na borda da
+              reserva não requerem desmatamento ou produtos agrícolas artificiais. O produtor obtém méis de altíssimo
+              valor de mercado e estimula a bioeconomia litorânea paranaense de forma ética.
+            </p>
+          </div>
+        </div>
+
+        <div class="rodape-reserva">
+          <span class="info-reserva">💡 <strong>Quer saber mais detalhes jurídicos e de manejo prático?</strong></span>
+          <a href="artigos/reserva-legal.html" class="botao botao-contorno">Ler Artigo Completo da Reserva Legal &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="recomendador" class="secao-recomendador">
+      <div class="card-secao sombra-suave">
+        <h2>Recomendador de Espécies por Cidade</h2>
+        <p class="texto-ajuda">
+          Selecione uma das cidades do litoral paranaense na barra de abas abaixo para ver as espécies de abelhas locais
+          e culturas de SAF mais indicadas para polinização mútua:
+        </p>
+
+        <!-- Botões das Cidades do Litoral Paranaense -->
+        <div class="botoes-cidades" role="tablist">
+          <button class="botao-cidade ativo" data-cidade="paranagua">Paranaguá</button>
+          <button class="botao-cidade" data-cidade="morretes">Morretes</button>
+          <button class="botao-cidade" data-cidade="antonina">Antonina</button>
+          <button class="botao-cidade" data-cidade="guaraqueçaba">Guaraqueçaba</button>
+          <button class="botao-cidade" data-cidade="matinhos">Matinhos</button>
+          <button class="botao-cidade" data-cidade="guaratuba">Guaratuba</button>
+          <button class="botao-cidade" data-cidade="pontaldoparana">Pontal do Paraná</button>
+        </div>
+
+        <!-- Grade de Resultados -->
+        <div class="grade-resultados">
+
+          <!-- Coluna: Abelhas Indicadas -->
+          <div class="coluna-resultados">
+            <h3>🐝 Abelhas Nativas Indicadas</h3>
+            <ul id="lista-abelhas" class="lista-especies">
+              <!-- Preenchido pelo JavaScript -->
+            </ul>
+          </div>
+
+          <!-- Coluna: Plantas Recomendadas para SAF -->
+          <div class="coluna-resultados">
+            <h3>🌱 Cultivos Agroflorestais (SAF)</h3>
+            <ul id="lista-saf" class="lista-especies">
+              <!-- Preenchido pelo JavaScript -->
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Caixa de Detalhes / Dica Ecológica de Manejo -->
+        <div id="painel-detalhes" class="caixa-informacao">
+          <h4 id="titulo-detalhes">💡 Dica de Leitura Avançada:</h4>
+          <p id="texto-detalhes">
+            Pressione ou clique em qualquer abelha ou cultivo listado acima para acessar nesta janela o guia
+            passo-a-passo dos segredos ecológicos e dicas de manejo sustentável!
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="artigos" class="secao-artigos">
+      <div class="titulo-secao-embrulho">
+        <h2>Manuais Didáticos de Agroecologia</h2>
+        <p> Explore guias ilustrativos simplificados criados pelos nossos estudantes de Antonina Paraná:</p>
+      </div>
+
+      <div class="grade-artigos">
+
+        <!-- Artigo 1 -->
+        <article class="card-artigo sombra-suave">
+          <img class="imagem-card" src="src/assets/images/atlantic_forest_coast.jpg" alt="Encostas verdes da Mata Atlântica e Baía de Antonina - Foto por Henrique Jakobi Moreira / Licença CC BY-SA 3.0" />
+          <div class="corpo-card">
+            <h3>Recuperar áreas degradadas</h3>
+            <p>Como o plantio consorciado pioneiro ajuda a devolver nutrientes e estruturação a terrenos enfraquecidos.
+            </p>
+            <a href="artigos/recuperar-solo.html" class="botao botao-contorno botao-leitura">Ler Manual Completo</a>
+          </div>
+        </article>
+
+        <!-- Artigo 2 -->
+        <article class="card-artigo sombra-suave">
+          <img class="imagem-card" src="src/assets/images/agroforestry_saf.jpg" alt="Cultura de grãos integrada com fileiras de árvores florestais - Foto por USDA National Agroforestry Center / Licença CC BY 2.0" />
+          <div class="corpo-card">
+            <h3>Como montar um SAF</h3>
+            <p>Combinações perfeitas de bananeiras, cafezais e palmitos organizados em andares de luz solar inteligente.
+            </p>
+            <a href="artigos/montar-saf.html" class="botao botao-contorno botao-leitura">Ler Manual Completo</a>
+          </div>
+        </article>
+
+        <!-- Artigo 3 -->
+        <article class="card-artigo sombra-suave">
+          <img class="imagem-card" src="src/assets/images/bee_nest.jpg" alt="Abelha Jataí na entrada de cera de seu ninho - Foto por Sintropepe / Licença CC BY-SA 4.0" />
+          <div class="corpo-card">
+            <h3>Criação prática de abelhas</h3>
+            <p>Segurança das colônias em meliponários modulares e manejo correto de espécies sem ferrão litorâneas.</p>
+            <a href="artigos/criar-abelhas.html" class="botao botao-contorno botao-leitura">Ler Manual Completo</a>
+          </div>
+        </article>
+
+        <!-- Artigo 4 -->
+        <article class="card-artigo sombra-suave">
+          <img class="imagem-card" src="src/assets/images/bee_pollination.jpg" alt="Abelha nativa polinizando flor Portulaca grandiflora - Foto por Lucas Silveira Souza / Licença CC BY-SA 4.0" />
+          <div class="corpo-card">
+            <h3>Abelhas e Produção Agrícola</h3>
+            <p>Por que as florestas enriquecidas com abelhas aumentam em até 40% a produtividade de cultivos vizinhos.
+            </p>
+            <a href="artigos/lucro-abelhas.html" class="botao botao-contorno botao-leitura">Ler Manual Completo</a>
+          </div>
+        </article>
+
+        <!-- Artigo 5 -->
+        <article class="card-artigo sombra-suave">
+          <img class="imagem-card" src="src/assets/images/legal_reserve_forest.jpg" alt="Reserva de floresta na Serra do Mar em Morretes-PR - Foto por V.Agostinelli / Licença CC BY-SA 4.0" />
+          <div class="corpo-card">
+            <h3>Manejo na Reserva Legal</h3>
+            <p>Consórcios sustentáveis e manejo rentável permitidos por lei ambiental nas áreas de mata preservada do
+              sítio.</p>
+            <a href="artigos/reserva-legal.html" class="botao botao-contorno botao-leitura">Ler Manual Completo</a>
+          </div>
+        </article>
+
+        <!-- Artigo 6 -->
+        <article class="card-artigo sombra-suave">
+          <img class="imagem-card" src="src/assets/images/bee_flowers.jpg" alt="Flor amarela da árvore Bracatinga Mimosa scabrella - Foto por Joao de Deus Medeiros / Licença CC BY 2.0" />
+          <div class="corpo-card">
+            <h3>Alimento todo o ano</h3>
+            <p>Quais árvores plantar para alimentar abelhas nativas nas épocas mais difíceis do calendário.</p>
+            <a href="artigos/alimento-colmeias.html" class="botao botao-contorno botao-leitura">Ler Manual Completo</a>
+          </div>
+        </article>
+
+        <!-- Artigo 7 -->
+        <article class="card-artigo sombra-suave">
+          <img class="imagem-card" src="src/assets/images/meliponary_hives.jpg" alt="Caixas racionais de meliponicultura em meliponário - Foto por Rodrigo Tetsuo Argenton / Licença CC BY-SA 4.0" />
+          <div class="corpo-card">
+            <h3>Como atrair abelhas nativas</h3>
+            <p>Preparação de loções atrativas com própolis e confecção de garrafas isca para resgate ecológico seguro.
+            </p>
+            <a href="artigos/ninho-isca.html" class="botao botao-contorno botao-leitura">Ler Manual Completo</a>
+          </div>
+        </article>
+
+        <!-- Artigo 8 -->
+        <article class="card-artigo sombra-suave">
+          <img class="imagem-card" src="src/assets/images/agroecology_education.jpg" alt="Estufa e canteiros pedagógicos de agroecologia - Foto por Bentojr / Licença CC BY-SA 4.0" />
+          <div class="corpo-card">
+            <h3>Produção e Preservação</h3>
+            <p>Entenda o modelo AgroPóllen integrado ideal para pequenas propriedades familiares no litoral paranaense.
+            </p>
+            <a href="artigos/sistema-agropollen.html" class="botao botao-contorno botao-leitura">Ler Manual Completo</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="sobre" class="secao-sobre">
+      <div class="grade-sobre">
+
+        <div class="card-sobre card-texto sombra-suave">
+          <span class="etiqueta-topo">Agrinho PR 2026</span>
+          <h2>Portal Educacional AgroPóllen</h2>
+          <p>
+            O <strong>AgroPóllen</strong> é um site interativo desenvolvido para a categoria de <strong>Programação
+              Front-End</strong> do Concurso Agrinho Paraná 2026. Ele serve como ferramenta educativa para agricultores
+            familiares, alunos e moradores do litoral.
+          </p>
+          <p>
+            Inspirados pela Mata Atlântica que nos cerca, defendemos que preservar os polinizadores originais e cultivar
+            Alimentos da Floresta é a chave para o futuro agrícola paranaense.
+          </p>
+        </div>
+
+        <div class="card-sobre card-lista sombra-suave">
+          <span class="etiqueta-topo">CCM Moysés Lupion</span>
+          <h2>Equipe Criadora</h2>
+          <p class="informacoes-colegio">Ideia original projetada e codificada por estudantes do primeiro ano técnico de
+            Antonina/PR:</p>
+          <ul class="nomes-equipe">
+            <li><strong>Professor Orientador:</strong> Carlos Schneider</li>
+            <li><strong>Estudante, Pesquisador e Desenvolvedor:</strong> Gabriel M. Silva</li>
+            <li><strong>Estudante, Pesquisadora e Desenvolvedora:</strong> Gabrielle A. Schmeil</li>
+            <li><strong>Estudante, Pesquisadora e Desenvolvedora:</strong> Maria V. C. da Rocha</li>
+            <li><strong>Estudante, Pesquisadora e Desenvolvedora:</strong> Alice P. dos Santos</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Rodapé institucional da página -->
+  <footer class="rodape-site">
+    <p>&copy; 2026 AgroPóllen • Concurso Agrinho PR 2026</p>
+    <p class="sub-rodape">Colégio Cívico-Militar Moysés Lupion • Antonina - Paraná</p>
+  </footer>
+
+  <script src="src/dados-cidades.js" defer></script>
+  <script src="src/main.js" defer></script>
+</body>
+
+</html>
