@@ -79,6 +79,10 @@ html, body, .barra-navegacao, .barra-acessibilidade, .card-secao, .card-coluna-r
 }
 
 /* --- ESTILIZAÇÃO BASE E ZOOM --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 html, body {
   background-color: var(--bg-app);
   color: var(--text-main);
@@ -87,4 +91,6 @@ html, body {
   padding: 0;
   /* Aplica a escala de fonte dinâmica baseada nas configurações de acessibilidade */
   font-size: calc(16px * var(--escala-letra));
+  overflow-x: hidden; /* Previne rolagem horizontal indesejada no mobile */
 }
+

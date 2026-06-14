@@ -34,6 +34,7 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  box-sizing: border-box;
 }
 
 .titulo-formulario-calculadora {
@@ -55,6 +56,8 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .grupo-formulario {
@@ -62,6 +65,8 @@
   flex-direction: column;
   gap: 8px;
   margin-bottom: 18px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .ultimo-grupo-formulario {
@@ -77,6 +82,7 @@
   letter-spacing: 0.04em;
 }
 
+/* Garantia de dimensionamento em blocos e 100% de largura */
 .entrada-formulario {
   font-family: var(--font-body);
   background-color: var(--bg-app);
@@ -88,6 +94,8 @@
   font-weight: 600;
   outline: none;
   transition: all 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .entrada-formulario:focus {
@@ -107,6 +115,7 @@
   cursor: pointer;
   box-shadow: var(--shadow-sm);
   transition: all 0.25s ease;
+  box-sizing: border-box;
 }
 
 .botao-calculadora:hover {
@@ -129,6 +138,7 @@
   position: relative;
   overflow: hidden;
   justify-content: space-between;
+  box-sizing: border-box;
 }
 
 /* Marca d'água no fundo do card de resultados */
@@ -151,6 +161,8 @@
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .resultados-aguardando h3 {
@@ -191,6 +203,8 @@
   flex-direction: column;
   gap: 20px;
   animation: fadeInResults 0.4s ease-out;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @keyframes fadeInResults {
@@ -214,6 +228,7 @@
   font-weight: 700;
   color: var(--text-main);
   line-height: 1.4;
+  box-sizing: border-box;
 }
 
 .item-estatistica {
@@ -225,6 +240,7 @@
   padding: 16px;
   border-radius: 12px;
   transition: all 0.2s ease;
+  box-sizing: border-box;
 }
 
 .item-estatistica:hover {
@@ -243,12 +259,14 @@
   justify-content: center;
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--border-color);
+  flex-shrink: 0;
 }
 
 .conteudo-estatistica {
   display: flex;
   flex-direction: column;
   gap: 2px;
+  overflow: hidden;
 }
 
 .valor-estatistica {
@@ -257,6 +275,7 @@
   font-weight: 800;
   color: var(--color-primary);
   line-height: 1.1;
+  word-wrap: break-word;
 }
 
 .rotulo-estatistica {
@@ -271,6 +290,7 @@
   border-top: 1px dashed var(--border-color);
   padding-top: 18px;
   margin-top: 8px;
+  box-sizing: border-box;
 }
 
 .caixa-dica {
@@ -278,6 +298,7 @@
   border: 1px solid var(--border-color);
   padding: 16px;
   border-radius: 10px;
+  box-sizing: border-box;
 }
 
 .titulo-dica {
@@ -299,4 +320,46 @@
 .rodape-calculadora {
   text-align: center;
   margin-top: 10px;
+}
+
+/* --- AJUSTES DE RESPONSIVIDADE PARA CELULARES --- */
+@media (max-width: 768px) {
+  .card-formulario-calculadora,
+  .card-resultados-calculadora {
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .titulo-formulario-calculadora {
+    font-size: 1.35rem;
+    text-align: center;
+  }
+
+  .texto-formulario-calculadora {
+    text-align: center;
+  }
+
+  .rotulo-formulario {
+    text-align: center;
+  }
+
+  .item-estatistica {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .icone-estatistica {
+    width: 44px;
+    height: 44px;
+    font-size: 1.5rem;
+  }
+
+  .valor-estatistica {
+    font-size: 1.2rem;
+  }
+
+  .logo-aguardando {
+    width: 140px;
+    height: 140px;
+  }
 }

@@ -1,13 +1,14 @@
 /* ==========================================================================
    PROJETO AGROPÓLLEN - CONTROLE DINÂMICO DO PORTAL
    ARQUIVO: main.js
-   DESCRIÇÃO: Inicializa os recursos de acessibilidade (ajuste de zoom e contraste)
-             e gerencia a exibição do widget interativo de recomendação por cidade.
+   DESCRIÇÃO: Inicializa os recursos de acessibilidade (ajuste de zoom e contraste),
+             gerencia a exibição do widget de recomendação por cidade e o menu mobile.
    ========================================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
   inicializarAcessibilidade();
   inicializarRecomendador();
+  inicializarMenuMobile();
 });
 
 /* ============================================================================
@@ -172,4 +173,30 @@ function inicializarRecomendador() {
 
   // Cidade inicial padrão (Paranaguá)
   carregarDadosCidade("paranagua");
+}
+
+/* ============================================================================
+   MENU MOBILE HAMBÚRGUER
+   ============================================================================ */
+function inicializarMenuMobile() {
+  const botaoMenu = document.getElementById("botao-menu");
+  const menuNavegacao = document.querySelector(".menu-navegacao");
+
+  if (!botaoMenu || !menuNavegacao) return;
+
+  botaoMenu.addEventListener("click", () => {
+    const aberto = botaoMenu.getAttribute("aria-expanded") === "true";
+    botaoMenu.setAttribute("aria-expanded", !aberto);
+    menuNavegacao.classList.toggle("aberto");
+    botaoMenu.classList.toggle("ativo");
+  });
+
+  // Fecha o menu de navegação ao selecionar qualquer link de âncora
+  menuNavegacao.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      botaoMenu.setAttribute("aria-expanded", "false");
+      menuNavegacao.classList.remove("aberto");
+      botaoMenu.classList.remove("ativo");
+    });
+  });
 }

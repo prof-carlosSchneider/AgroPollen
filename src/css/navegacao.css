@@ -1,6 +1,6 @@
 /* ==========================================================================
    ARQUIVO: navegacao.css
-   DESCRIÇÃO: Estilos da barra de navegação principal e do rodapé do site.
+   DESCRIÇÃO: Estilos da barra de navegação principal, menu hambúrguer e rodapé.
    ========================================================================== */
 
 /* --- NAVBAR FIXA NO TOPO --- */
@@ -63,7 +63,43 @@
   margin-top: 1px;
 }
 
-/* Lista do menu de navegação */
+/* --- BOTÃO DO MENU HAMBÚRGUER --- */
+.botao-menu {
+  display: none; /* Oculto por padrão no desktop */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  z-index: 105;
+}
+
+.barra-hamburguer {
+  width: 100%;
+  height: 2.5px;
+  background-color: var(--color-primary);
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animações das barras ao abrir o menu (transformação em X) */
+.botao-menu.ativo .barra-hamburguer:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.botao-menu.ativo .barra-hamburguer:nth-child(2) {
+  opacity: 0;
+}
+
+.botao-menu.ativo .barra-hamburguer:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* --- LISTA DO MENU DE NAVEGAÇÃO --- */
 .menu-navegacao {
   display: flex;
   list-style: none;
@@ -101,7 +137,7 @@
   width: 100%;
 }
 
-/* Link destacado para a calculadora (Destaque em Amarelo-Mel) */
+/* Links em destaque */
 .link-navegacao.link-destaque {
   color: var(--color-accent);
 }
@@ -112,6 +148,51 @@
 
 .link-navegacao.link-destaque:hover {
   color: var(--color-accent-hover);
+}
+
+/* --- MEDIA QUERY PARA MOBILE (MENU HAMBÚRGUER ATIVO) --- */
+@media (max-width: 768px) {
+  .botao-menu {
+    display: flex; /* Exibe o botão hambúrguer no celular */
+  }
+
+  .menu-navegacao {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease-in-out, opacity 0.3s ease-in-out, padding 0.35s ease-in-out;
+    gap: 16px;
+    padding: 0;
+    z-index: 99;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Exibição suave quando a classe '.aberto' é injetada via JS */
+  .menu-navegacao.aberto {
+    max-height: 320px;
+    opacity: 1;
+    padding: 20px 0;
+  }
+
+  .link-navegacao {
+    font-size: 0.95rem;
+    padding: 8px 0;
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+
+  .link-navegacao::after {
+    display: none; /* Desativa a borda hover animada no mobile */
+  }
 }
 
 /* --- RODAPÉ INSTITUCIONAL --- */
