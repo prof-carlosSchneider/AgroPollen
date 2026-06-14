@@ -90,6 +90,9 @@ Por utilizar caminhos relativos e não possuir dependências externas, o projeto
 1. Faça o download ou clone do repositório.
 2. Dê um duplo clique no arquivo `index.html` para abrir o site diretamente no seu navegador de preferência.
 
+Ou pelo link do GitHub Pages
+1. https://prof-carlosschneider.github.io/AgroPollen/
+
 ---
 
 ## 7. Fontes Científicas e Referências (Calibração da Calculadora)
